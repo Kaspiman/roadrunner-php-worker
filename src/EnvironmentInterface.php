@@ -32,4 +32,9 @@ interface EnvironmentInterface
      * RPC address.
      */
     public function getRPCAddress(): string;
+
+    /**
+     * Roadrunner version
+     */
+    public function getVersion(): string;
 }
