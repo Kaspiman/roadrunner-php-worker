@@ -28,7 +28,7 @@ class Environment implements EnvironmentInterface
 
     public function getMode(): string
     {
-        return $this->get('RR_MODE', '');
+        return $this->get('RR_MODE');
     }
 
     public function getRelayAddress(): string
@@ -43,7 +43,7 @@ class Environment implements EnvironmentInterface
 
     public function getVersion(): string
     {
-        return $this->get('RR_VERSION', '');
+        return $this->get('RR_VERSION');
     }
 
     /**
