@@ -276,11 +276,10 @@ class Worker implements StreamWorkerInterface
         );
     }
 
-    private function sendProcessId(): static
+    private function sendProcessId(): void
     {
         $frame = new Frame($this->encode(['pid' => \getmypid()]), [], Frame::CONTROL);
         $this->sendFrame($frame);
-        return $this;
     }
 
     private function haveToPing(): void
