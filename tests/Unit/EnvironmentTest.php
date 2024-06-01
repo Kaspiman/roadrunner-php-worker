@@ -45,15 +45,23 @@ final class EnvironmentTest extends TestCase
         $this->assertEquals('rpc_value', $env->getRPCAddress());
     }
 
+    public function testGetVersionWithValue(): void
+    {
+        $env = new Environment(['RR_VERSION' => '2024.1.3']);
+        $this->assertEquals('2024.1.3', $env->getVersion());
+    }
+
     public function testFromGlobals(): void
     {
         $_ENV['RR_MODE'] = 'global_mode';
         $_SERVER['RR_RELAY'] = 'global_relay';
+        $_SERVER['RR_VERSION'] = 'global_version';
 
         $env = Environment::fromGlobals();
 
         $this->assertEquals('global_mode', $env->getMode());
         $this->assertEquals('global_relay', $env->getRelayAddress());
+        $this->assertEquals('global_version', $env->getVersion());
         $this->assertEquals('tcp://127.0.0.1:6001', $env->getRPCAddress());
     }
 }
