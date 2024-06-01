@@ -14,10 +14,10 @@ labels: Bug
 
 ### Additional Info
 
-| Q                | A
-|------------------| ---
-| Package Version  | x.y.z <!-- Please set the package version -->
-| PHP version      | x.y.z <!-- Please set the PHP version -->
-| Operating system | Linux <!-- Please set your OS -->
+| Q                | A                                             |
+|------------------|-----------------------------------------------|
+| Package Version  | x.y.z <!-- Please set the package version --> |
+| PHP version      | x.y.z <!-- Please set the PHP version -->     |
+| Operating system | Linux <!-- Please set your OS -->             |
 
 <!-- Optional: any other context about the problem: log messages, screenshots, etc. -->
