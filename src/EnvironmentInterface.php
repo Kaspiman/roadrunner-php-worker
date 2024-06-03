@@ -12,6 +12,7 @@ use Spiral\RoadRunner\Environment\Mode;
  *
  * @psalm-import-type ModeType from Mode
  * @see Mode
+ * @method string getVersion()
  */
 interface EnvironmentInterface
 {
@@ -32,9 +33,4 @@ interface EnvironmentInterface
      * RPC address.
      */
     public function getRPCAddress(): string;
-
-    /**
-     * Roadrunner version
-     */
-    public function getVersion(): string;
 }
